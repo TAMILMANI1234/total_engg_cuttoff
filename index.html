@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> calculate total mark and engineering cutoff.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Write a Javascript program to read the 12th mark and calculate total mark and engineering cutoff.</h2>
+    <form action="">
+        <table width="70%">
+            <tr>
+               <th>Subject</th>
+                <th>Mark</th> 
+            </tr> 
+            <tr>
+                <th>Tamil</th>
+                <th><input type="text" id="m1"></th> 
+            </tr> 
+            <tr>
+                    <th>English</th>
+                    <th><input type="text" id="m2"></th> 
+           </tr> 
+           <tr>
+                 <th>Mathematics</th>
+                 <th><input type="text" id="m3"></th> 
+            </tr> 
+            <tr>
+                <th>Chemistry</th>
+               <th><input type="text" id="m4"></th> 
+           </tr>
+           <tr>
+               <th>Physics</th>
+               <th><input type="text" id="m5"></th> 
+            </tr>
+            <tr>
+                <th>Biology</th>
+                <th><input type="text" id="m6"></th> 
+           </tr>
+           
+        </table>
+    </form>
+
+    <br>
+     
+          <button id="btn1"  onclick="f1()">CALCULATE TOTAL </button><br><br><br>
+          <table width="70%" >
+              <tr>
+                  <th>Total</th>
+                  <th id="total"></th>
+              </tr>
+          </table>
+          <button id="btn2"  onclick="f2()">CALCULATE ENGINEERING CUTOFF </button><br><br><br>
+          <table width="70%">
+              <tr>
+                  <th>ENGINEERING CUTOFF</th>
+                  <th id="e"></th>
+              </tr>
+          </table>
+  <script>
+      function f1(){
+            var m1=document.getElementById("m1").value;
+            var m2=document.getElementById("m2").value;
+            var m3=document.getElementById("m3").value;
+            var m4=document.getElementById("m4").value;
+            var m5=document.getElementById("m5").value;
+            var m6=document.getElementById("m6").value;
+
+            var total = parseFloat(m1)+parseFloat(m2)+parseFloat(m3)+parseFloat(m4)+parseFloat(m5)+parseFloat(m6);
+         if(!isNaN(total)){
+            document.getElementById('total').innerHTML= total;
+             }
+             else{
+                document.getElementById('total').innerHTML= "Enter marks First";
+             }
+        }
+        function f2(){
+            var m3=document.getElementById("m3").value;
+            var m4=document.getElementById("m4").value;
+            var m5=document.getElementById("m5").value;
+           
+
+            var total = parseFloat(m3)+parseFloat(m4)+parseFloat(m5);
+            var e=total/3;
+         if(!isNaN(total)){
+            document.getElementById('e').innerHTML= e;
+             }
+             else{
+                document.getElementById('e').innerHTML= "Enter marks First";
+             }
+        }
+ 
+  </script>
+</body>
+</html>
